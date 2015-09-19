@@ -16,6 +16,13 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from . import views
+
 urlpatterns = [
+    # example: /family_recipes_app/
+    url(r'^$', views.index, name='index'),
+    # ex: /about/
+    url(r'^about/$', views.about, name='about'),
+    # example: /admin/
     url(r'^admin/', include(admin.site.urls)),
 ]
