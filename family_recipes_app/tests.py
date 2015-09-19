@@ -13,11 +13,19 @@ class HomeNewVisitorTest(LiveServerTestCase):
 
     def test_it_worked_site_title(self):
         self.browser.get('http://localhost:8000')
-        self.assertIn('Welcome to Django', self.browser.title)
+        self.assertIn('Kennedy Family Recipes', self.browser.title)
 
-    def test_it_worked_site_body_text(self):
-        self.browser.get('http://localhost:8000')
-        self.assertIn('It worked!', self.browser.find_element_by_id("summary").text)
+#    def test_it_worked_site_body_text(self):
+#        self.browser.get('http://localhost:8000')
+#        self.assertIn('From pancakes to homemade granola', self.browser.find_element_by_id("summary").text)
+
+    def test_about_page_site_title(self):
+        self.browser.get('http://localhost:8000/about/')
+        self.assertIn('', self.browser.title)
+
+#    def test_about_page_body_text(self):
+#        self.browser.get('http://localhost:8000')
+#        self.assertIn('This is the ABOUT page for the Kennedy Family Recipe site.', self.browser.find_element_by_id("summary").text)
 
 if __name__ == '__main__':
     unittest.main(warnings='ignore')
