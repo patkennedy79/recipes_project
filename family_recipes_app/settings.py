@@ -131,3 +131,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+# Define MEDIA_ROOT as the full path to a directory where you’d like Django to store uploaded files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/family_recipes_app')
+
+# Define MEDIA_URL as the base public URL of that directory
+MEDIA_URL = '/media/'

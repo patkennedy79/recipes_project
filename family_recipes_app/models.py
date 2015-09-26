@@ -22,6 +22,7 @@ class Recipe(models.Model):
     recipe_type = models.CharField(max_length=2, choices=RECIPE_TYPE_CHOICES, default=DINNER)
     recipe_steps = models.TextField(default='Add recipe steps!')
     ingredients = models.TextField(default='Add ingredients!')
+    image = models.ImageField(upload_to='images/', default = 'images/default_image.jpg')
 
     def __str__(self):              # __unicode__ on Python 2
         return self.name
