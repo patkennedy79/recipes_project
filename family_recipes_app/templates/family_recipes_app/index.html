@@ -1,71 +1,39 @@
-{% load staticfiles %}
+{% extends "family_recipes_app/base_template.html" %}
 
-<!DOCTYPE html>
-<html>
-
-  <head>
-    <title>Kennedy Family Recipes</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="{% static 'family_recipes_app/css/bootstrap.min.css' %}">
-
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="{% static 'family_recipes_app/css/main.css' %}">
-  </head>
-
-  <body>
-    <div class="nav">
-      <div class="container">
-
-        <ul class="pull-left">
-          <li><a href="#">Home</a></li>
-        </ul>
-
-        <ul class="pull-right">
-          <li><a href="#">Help</a></li>
-        </ul>
-
-      </div>
-    </div>
-
-    <div class="jumbotron">
-      <div class="container">
+{% block content %}
+    <div class="container">
+      <div class="jumbotron">
         <h1>Kennedy Family Recipes</h1>
-        <p>Our favorite family recipes!</p>
+        <p>This site describes our favorite family recipes!</p>
       </div>
-    </div>
+    </div> <!-- /container -->
 
-    <div class="learn-more">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-md-4">
-            <h3>Breakfast</h3>
-            <p>From pancakes to homemade granola, these are our favorite breakfast recipes.</p>
-            <p><a href="#">Breakfast Recipes</a></p>
-          </div>
-
-          <div class="col-md-4">
-            <h3>Lunch</h3>
-            <p>From sandwiches to smoothies, these are our favorite breakfast recipes.</p>
-            <p><a href="#">Lunch Recipes</a></p>
-          </div>
-
-          <div class="col-md-4">
-            <h3>Dinner</h3>
-            <p>From pasta to tacos, these are our favorite breakfast recipes.</p>
-            <p><a href="#">Dinner Recipes</a></p>
-          </div>
-
-          <div class="col-md-4">
-            <h3>Dessert</h3>
-            <p>From cookies to cakes, these are our favorite breakfast recipes.</p>
-            <p><a href="#">Dessert Recipes</a></p>
-          </div>
-
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h2>Breakfast Recipes</h2>
+          <img class="img-responsive" img src="../../static/family_recipes_app/images/IMG_6272.JPG" class="img-rounded" alt="Cinque Terre">
+          <p>From pancakes to homemade granola, these are the breakfast recipes that our family enjoys! </p>
+          <p><a class="btn btn-default" href="recipes/breakfast" role="button">Breakfast Recipes &raquo;</a></p>
+        </div>
+        <div class="col-md-3">
+          <h2>Lunch Recipes</h2>
+          <img class="img-responsive" img src="../../static/family_recipes_app/images/IMG_1204.JPG" class="img-rounded" alt="Cinque Terre">
+          <p>From turkey sandwiches to our favorite garden salads, these are the lunch recipes that our family enjoys! </p>
+          <p><a class="btn btn-default" href="recipes/lunch" role="button">Lunch Recipes &raquo;</a></p>
+       </div>
+        <div class="col-md-3">
+          <h2>Dinner Recipes</h2>
+          <img class="img-responsive" img src="../../static/family_recipes_app/images/IMG_6128.JPG" class="img-rounded" alt="Cinque Terre">
+          <p>From chicken fajitas to our world-famous tacos (!!!), these are the dinner recipes that our family enjoys! </p>
+          <p><a class="btn btn-default" href="recipes/dinner" role="button">Dinner Recipes &raquo;</a></p>
+        </div>
+        <div class="col-md-3">
+          <h2>Dessert Recipes</h2>
+          <img class="img-responsive" img src="../../static/family_recipes_app/images/IMG_6753.JPG" class="img-rounded" alt="Cinque Terre">
+          <p>From cookies to cupcakes, these are the dessert recipes that our family enjoys! </p>
+          <p><a class="btn btn-default" href="recipes/dessert" role="button">Dessert Recipes &raquo;</a></p>
         </div>
       </div>
-    </div>
-
-  </body>
-</html>
+    </div> <!-- /container -->
+{% endblock %}

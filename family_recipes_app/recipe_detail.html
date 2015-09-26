@@ -1,0 +1,36 @@
+{% extends "family_recipes_app/base_template.html" %}
+
+{% block content %}
+    <div class="container">
+      <h3>{{ recipe.name }}</h3>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">Description</div>
+            <div class="panel-body">{{ recipe.description }}</div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">Rating</div>
+            <div class="panel-body">{{ recipe.rating }}</div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">Meal Type</div>
+            <div class="panel-body">{{ recipe.get_recipe_type_display }}</div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <img class="img-responsive" img src="{{ recipe.image.url }}" class="img-rounded" alt={{ recipe.name }} height=420px width=420px>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">Ingredients</div>
+        <div class="panel-body">{{ recipe.ingredients|linebreaks }}</div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">Recipe Steps</div>
+        <div class="panel-body">{{ recipe.recipe_steps|linebreaks }}</div>
+      </div>
+    </div> <!-- /container -->
+{% endblock %}
